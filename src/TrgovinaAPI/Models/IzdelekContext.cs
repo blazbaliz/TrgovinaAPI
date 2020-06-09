@@ -9,6 +9,6 @@ namespace TrgovinaAPI.Models
 
         }
 
-        public DbSet<Izdelek> IzdelekItems { get; set;}
+        public DbSet<Izdelek> Izdelki { get; set;}
     }
 }

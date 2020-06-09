@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using TrgovinaAPI.Models;
 
 namespace TrgovinaAPI.Controllers
 {
@@ -7,10 +8,16 @@ namespace TrgovinaAPI.Controllers
     [ApiController]
     public class IzdelkiController : ControllerBase
     {
+        private readonly IzdelekContext _context;
+
+        public IzdelkiController(IzdelekContext context) => _context = context;
+
+
+        //GET:      api/Izdelki
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<Izdelek>> GetIzdelki()
         {
-            return new string[] { "to", "je","zakodirano"};
+            return _context.Izdelki;
         }
     }
 }
