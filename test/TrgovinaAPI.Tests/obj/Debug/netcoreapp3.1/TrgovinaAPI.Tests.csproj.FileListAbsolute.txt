@@ -120,3 +120,4 @@ C:\Users\tarrum\Desktop\training\TrgovinaAPISolution\test\TrgovinaAPI.Tests\bin\
 C:\Users\tarrum\Desktop\training\TrgovinaAPISolution\test\TrgovinaAPI.Tests\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\tarrum\Desktop\training\TrgovinaAPISolution\test\TrgovinaAPI.Tests\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\tarrum\Desktop\training\TrgovinaAPISolution\test\TrgovinaAPI.Tests\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tarrum\Desktop\training\TrgovinaAPISolution\test\TrgovinaAPI.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
