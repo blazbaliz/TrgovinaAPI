@@ -249,10 +249,14 @@ namespace TrgovinaAPI.Tests
         public void DeleteNarocila_Return200Ok_WhenValidObjectID()
         {
         //Given
-        
+        dbContext.Narocila.Add(narocilo);
+        dbContext.SaveChanges();
+
+        var NarociloId = narocilo.Id;
         //When
-        
+        var result = controller.DeleteNarocila(NarociloId);
         //Then
+        Assert.Null(result.Result);
         }
 
         [Fact]
@@ -261,18 +265,23 @@ namespace TrgovinaAPI.Tests
         //Given
         
         //When
-        
+        var result = controller.DeleteNarocila(-1);
         //Then
+        Assert.IsType<NotFoundResult>(result.Result);
         }
 
         [Fact]
         public void DeleteNarocila_ObjectCountNotDecrement_WhenInvalidObjectID()
         {
         //Given
-        
+        dbContext.Narocila.Add(narocilo);
+        dbContext.SaveChanges();
+        var NarociloId = narocilo.Id;
+        var objCount = dbContext.Narocila.Count();
         //When
-        
+        var result = controller.DeleteNarocila(NarociloId+1);
         //Then
+        Assert.Equal(objCount, dbContext.Narocila.Count());
         }
 
     }
