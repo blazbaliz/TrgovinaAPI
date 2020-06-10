@@ -30,6 +30,7 @@ namespace TrgovinaAPI
 
             services.AddDbContext<IzdelekContext>(opt => opt.UseNpgsql(builder.ConnectionString));
             services.AddDbContext<UporabnikiContext>(opt => opt.UseNpgsql(builder.ConnectionString));
+            services.AddDbContext<NarocilaContext>(opt => opt.UseNpgsql(builder.ConnectionString));
 
             services.AddControllers();
         }
