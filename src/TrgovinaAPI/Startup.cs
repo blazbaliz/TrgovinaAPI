@@ -29,6 +29,7 @@ namespace TrgovinaAPI
             builder.Password = Configuration["Password"];
 
             services.AddDbContext<IzdelekContext>(opt => opt.UseNpgsql(builder.ConnectionString));
+            services.AddDbContext<UporabnikiContext>(opt => opt.UseNpgsql(builder.ConnectionString));
 
             services.AddControllers();
         }
