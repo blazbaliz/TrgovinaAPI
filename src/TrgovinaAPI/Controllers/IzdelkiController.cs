@@ -13,7 +13,7 @@ namespace TrgovinaAPI.Controllers
 
         public IzdelkiController(IzdelekContext context) => _context = context;
 
-
+        //komentar
         //GET:      api/Izdelki
         [HttpGet]
         public ActionResult<IEnumerable<Izdelek>> GetIzdelki()
