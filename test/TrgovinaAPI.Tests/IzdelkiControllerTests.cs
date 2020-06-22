@@ -371,7 +371,7 @@ namespace TrgovinaAPI.Tests
         //When
         var result = controller.DeleteIzdelki(-1);
         //Then
-        Assert.IsType<NotFoundResult>(result.Result);
+        Assert.IsType<OkResult>(result.Result);
         }
 
         [Fact]
