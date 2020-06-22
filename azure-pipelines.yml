@@ -14,7 +14,7 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: "Net Core 3.1.x"
+  displayName: 'Net Core 3.1.x'
   inputs:
     version: '3.1.x'
     packageType: sdk
@@ -29,13 +29,3 @@ steps:
     projects: '**/*Tests/*.csproj'
     testRunTitle: 'xUnit Test Run'
 
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet publish'
-  inputs: 
-    command: publish
-    publishWebProjects: false
-    projects: 'src/TrgovinaAPI/*.csproj'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-
-- task: PublishBuildArtifacts@1
-  displayName: 'publish artifacts'
